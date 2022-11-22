@@ -7,6 +7,7 @@
  *
  * SPDX-License-Identifier: BSD-3-Clause
  */
+// Portion Copyright [2022] Payara Foundation and/or affiliates
 
 package com.sun.xml.ws.transport;
 

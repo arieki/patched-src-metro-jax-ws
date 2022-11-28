@@ -7,6 +7,7 @@
  *
  * SPDX-License-Identifier: BSD-3-Clause
  */
+// Portions Copyright [2022] [Payara Foundation and/or its affiliates]
 
 package com.sun.xml.ws.util.pipe;
 
@@ -47,9 +48,9 @@ public class AbstractSchemaValidationTubeTest extends TestCase {
 	}
 	
 	public void testCreateSameTnsPseudoSchema() throws InstantiationException, IllegalAccessException, NoSuchMethodException, SecurityException, IllegalArgumentException, InvocationTargetException, TransformerException {
-    StringBuilder sb = new StringBuilder("<?xml version=\"1.0\" encoding=\"UTF-8\"?><xsd:schema xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\">\n");
-		sb.append("<xsd:include schemaLocation=\"a.xsd\"/>\n");
-		sb.append("<xsd:include schemaLocation=\"b.xsd\"/>\n");
+    StringBuilder sb = new StringBuilder("<?xml version=\"1.0\" encoding=\"UTF-8\"?><xsd:schema xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\">" + System.lineSeparator());
+		sb.append("<xsd:include schemaLocation=\"a.xsd\"/>" + System.lineSeparator());
+		sb.append("<xsd:include schemaLocation=\"b.xsd\"/>" + System.lineSeparator());
 		sb.append("</xsd:schema>");
 		
 		String strResult_null = runCreateSameTnsPseudoSchema(null);

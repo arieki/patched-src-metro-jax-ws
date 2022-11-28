@@ -7,6 +7,7 @@
  *
  * SPDX-License-Identifier: BSD-3-Clause
  */
+// Portions Copyright [2022] [Payara Foundation and/or its affiliates]
 
 package com.sun.xml.ws.streaming;
 
@@ -74,7 +75,7 @@ public class XMLReaderCompositeTest extends TestCase {
             XMLStreamReaderUtil.readRest(r);
             fail("Exception should be thrown");
         } catch (Exception e) {
-            assertEquals("XML reader error: Unexpected character 't' (code 116) in prolog; expected '<'\n" + 
+            assertEquals("XML reader error: Unexpected character 't' (code 116) in prolog; expected '<'" + System.lineSeparator() +
                     " at [row,col {unknown-source}]: [1,1]", e.getMessage());
         }
 
